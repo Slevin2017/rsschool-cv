@@ -1,0 +1,8 @@
+@media only screen and (max-width: 960px){
+    .pg-row {
+        flex-wrap: wrap;
+    }
+    .pg-sidebar, .pg-content {
+        width: 100%;
+    }
+}
