@@ -1,0 +1,169 @@
+$bg_1: #efefef;
+$bg_2: #2d3d94;
+$black: #000;
+$pd: 30px;
+
+$trs: all 0.3s ease-in-out;
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Roboto, Calibri, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+		sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	min-height: 100%;
+}
+
+* {
+	&::selection {
+		background-color: lighten($bg_1, 5%);
+	}
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+a {
+	color: lighten($bg_2, 5%);
+	font-weight: 400;
+	transition: $trs;
+
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+.pg {
+	&-info {
+		margin: 0;
+		font-size: 15px;
+		caption {
+			font-weight: 600;
+			font-size: 17px;
+			text-align: left;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+		}
+
+		th {
+			padding: 0 0 10px;
+			text-align: left;
+			line-height: 1.1;
+		}
+
+		tr {
+			display: block;
+		}
+
+		td {
+			padding: 0px 0 0;
+
+			a {
+				display: block;
+				padding: 0;
+				text-align: left;
+			}
+		}
+
+		th,
+		td {
+			display: block;
+			width: 100%;
+		}
+	}
+	&-text {
+		text-align: left;
+		font-size: 13px;
+		line-height: 1.4;
+		border-collapse: collapse;
+
+		tr {
+			//border: 1px solid darken($bg_1, 5%);
+			border-width: 1px 0;
+		}
+
+		th,
+		td {
+			padding: 0;
+		}
+
+		th {
+			line-height: 1;
+		}
+
+		td {
+			padding: 15px;
+			color: rgba($black, 0.8);
+		}
+
+		a {
+			word-break: break-word;
+			padding: 15px 0;
+			margin: 3px;
+		}
+
+		p {
+			padding: 0;
+		}
+	}
+
+	&-sidebar {
+		width: 25%;
+		padding: $pd;
+		background-color: lighten($bg_1, 4%);
+	}
+	&-content {
+		width: 70%;
+		padding: $pd;
+	}
+	&-container {
+		max-width: 950px;
+		margin-left: auto;
+		margin-right: auto;
+
+		font-weight: 400;
+	}
+	&-row {
+		display: flex;
+		flex-wrap: nowrap;
+		border: 1px solid darken($bg_1, 3%);
+		text-align: center;
+	}
+
+	&-main {
+		padding: 20px;
+	}
+}
+
+.heading {
+	&-1 {
+		margin-top: 0;
+		font-size: 26px;
+		font-weight: 400;
+	}
+	&-2 {
+		margin-top: 0;
+	}
+}
+
+@media only screen and (max-width: 960px) {
+	.pg-row {
+		flex-wrap: wrap;
+	}
+	.pg-sidebar,
+	.pg-content {
+		width: 100%;
+	}
+
+	.pg-text td,
+	.pg-text th {
+		display: block;
+	}
+}
