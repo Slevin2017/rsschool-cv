@@ -61,5 +61,5 @@ KPI, freeCodeCamp, Egghead, Udemy, htmlacademy
 ----
 
 ## LANGUAGES
-Eng: A2, good reading tech docs and medium
+Eng: A2, good reading tech docs and medium👽
 
